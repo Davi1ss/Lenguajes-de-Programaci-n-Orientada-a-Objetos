@@ -5,11 +5,12 @@ Laboratorio 1
 *******************************************************************************/
 import java.util.Scanner;
 
-public class Main {
+public class Laboratorio1 {
     public static void main(String[] args) {
         // Crear un arreglo para almacenar los objetos Estudiante
-        Estudiante[] estudiantes = new Estudiante[2];
-        Scanner scanner = new Scanner(System.in);
+        Estudiante[] estudiantes = new Estudiante[5];
+        try (Scanner scanner = new Scanner(System.in)){
+        
 
         // Capturar los datos del profesor
         System.out.println("Ingrese los datos del profesor:");
@@ -90,10 +91,13 @@ public class Main {
                 mostrarDatosProfesor(profesor);
                 mostrarDatosEstudiantes(estudiantes);
                 mostrarDatosMateria(materia);
+                break;
                 
             default:
                 System.out.println("Opción no válida");
+                break;
         }
+    }
     }
 
     // Función para mostrar los datos del profesor
