@@ -58,6 +58,9 @@ class Persona {
     public void ejercicio(String ejercicio) {
         System.out.println("En promedio hago 30 " + ejercicio + " al dia");
     }
+    public void tomarBano(int hora, String temperaturaAgua) {
+        System.out.println("Me toca baño en: " + hora + " hora y el agua: "+ temperaturaAgua);
+    }
     public void imprimirDatos() {
         System.out.println("Nombre: " + nombre);
         System.out.println("Edad: " + edad);
@@ -71,10 +74,11 @@ class Persona {
 public class Laboratorio2 {
     public static void main(String[] args) {
         Persona persona1 = new Persona("Steven", 21, "masculino", "Rosarito", "Estudiante");
-        persona1.setGenero("masculino");
+        persona1.setGenero("femenino");
         persona1.comer("Enchiladas");
         persona1.dormir(8);
         persona1.ejercicio("Burpees");
+        persona1.tomarBano(1,"esta fria");
         persona1.imprimirDatos();
     }
 }
