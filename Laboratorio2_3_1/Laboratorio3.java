@@ -1,3 +1,4 @@
+package Laboratorio2_3_1;
 import java.util.Scanner;
 //atributos de la persona
 public class Laboratorio3 {

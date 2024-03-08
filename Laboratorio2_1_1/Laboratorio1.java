@@ -8,7 +8,8 @@ import java.util.Scanner;
 public class Laboratorio1 {
     public static void main(String[] args) {
         // Crear un arreglo para almacenar los objetos Estudiante
-        Estudiante[] estudiantes = new Estudiante[5];
+        
+        Estudiante[] estudiantes = new Estudiante[3];
         try (Scanner scanner = new Scanner(System.in)){
         
 

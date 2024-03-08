@@ -1,3 +1,4 @@
+package Laboratorio2_2_1;
 class Persona {
     //Atributos demograficos
     private String nombre;
