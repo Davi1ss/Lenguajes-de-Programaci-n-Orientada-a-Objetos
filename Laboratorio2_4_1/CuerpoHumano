@@ -1,0 +1,89 @@
+public class CuerpoHumano {
+
+    // Clase anidada 'Corazon' hereda de 'Organos'
+    public class Corazon {
+        private int ritmoCardiaco;
+
+        public void latir() {
+            System.out.println("El corazón está latiendo. Ritmo cardiaco: " + ritmoCardiaco);
+        }
+
+        public int getRitmoCardiaco() {
+            return ritmoCardiaco;
+        }
+
+        public void setRitmoCardiaco(int ritmoCardiaco) {
+            this.ritmoCardiaco = ritmoCardiaco;
+        }
+    }
+
+    // Clase anidada 'Pulmon' hereda de 'Organos'
+    static class Pulmon {
+        private int volumenRespiratorio;
+        private int flujoAire;
+
+
+        public void respirar() {
+            
+            System.out.print("Los pulmones están respirando. ");
+            System.out.println("Volumen respiratorio: " + volumenRespiratorio + " ml");
+            System.out.println("Flujo de aire: " + flujoAire + " ml/s");
+        }
+
+        public int getVolumenRespiratorio() {
+            return volumenRespiratorio;
+        }
+
+        public int getFlujoAire() {
+            return flujoAire;
+        }
+
+        public void setVolumenRespiratorio(int volumenRespiratorio) {
+            this.volumenRespiratorio = volumenRespiratorio;
+        }
+
+        public void setFlujoAire(int flujoAire) {
+            this.flujoAire = flujoAire;
+        }
+    }
+
+
+    static class Estomago {
+        private String funcionamiento;
+
+        public void digerir() {
+            
+            System.out.println("El estómago está digiriendo. Capacidad digestiva: " + funcionamiento);
+        }
+
+        public String getEstomago() {
+            return funcionamiento;
+        }
+
+        public void setEstomago(String funcionamiento) {
+            this.funcionamiento = funcionamiento;
+        }
+
+
+    }
+
+    public static void main(String[] args) {
+        // Crear instancia de la clase principal CuerpoHumano
+        CuerpoHumano ch = new CuerpoHumano();
+    
+        // Crear instancias encapsuladas de las clases anidadas
+        CuerpoHumano.Corazon cor = ch.new Corazon();
+        CuerpoHumano.Pulmon pul = ch.new Pulmon();
+        CuerpoHumano.Estomago est = ch.new Estomago();
+    
+        // Asignar valor al atributo ritmoCardiaco de la clase Corazon
+        cor.setRitmoCardiaco(70);
+        pul.setVolumenRespiratorio(500);
+        pul.setFlujoAire(50);
+        est.setEstomago("Correcta");
+        // Simular el funcionamiento del cuerpo humano
+        cor.latir();
+        pul.respirar();
+        est.digerir();
+    }
+}
